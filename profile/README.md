@@ -108,16 +108,46 @@ boundaries are ready. [See the deployment models →](https://inbrief.sh/#ib-dep
 The full REST contract is published as [OpenAPI](https://inbrief.sh/docs/developers/openapi.json),
 and the site ships an [llms.txt](https://inbrief.sh/llms.txt) so coding agents can read it directly.
 
-<div align="center">
-<br>
+## Badges, widgets & feeds
 
-**Not a picture — this badge is live, served by InBrief as you read it:**
+Public, unauthenticated, cached for five minutes — no API key anywhere, because
+it is all public information by design. **A badge URL never 404s:** an unknown
+slug, a renamed service, even an unknown host renders the grey `unknown` badge,
+because a broken image in somebody else's README reads as *your* service being
+broken.
 
-<a href="https://demo.inbrief.sh"><img src="https://demo.inbrief.sh/badge.svg" alt="Live status of the InBrief demonstration page"></a>
+Every badge below is a real SVG served by InBrief from our demonstration page
+(GitHub re-fetches them every few minutes):
 
-<sub>It reports our <a href="https://demo.inbrief.sh">demonstration page</a>, which is held in an incident on purpose — so it says <code>degraded</code> by design.<br>Drop <code>/badge.svg</code> from any InBrief page into a README or a dashboard.</sub>
+| | Route | What it shows |
+| :-- | :-- | :-- |
+| [![](https://demo.inbrief.sh/badge.svg)](https://demo.inbrief.sh) | `/badge.svg` | The whole page — `operational`, `degraded`, `down` or `unknown` |
+| [![](https://demo.inbrief.sh/badge/api.svg)](https://demo.inbrief.sh) | `/badge/api.svg` | One monitor, labelled with its own name |
+| [![](https://demo.inbrief.sh/badge/legacy-import.svg)](https://demo.inbrief.sh) | `/badge/legacy-import.svg` | The service currently in the incident |
+| [![](https://demo.inbrief.sh/badge.svg?style=uptime)](https://demo.inbrief.sh) | `/badge.svg?style=uptime` | Thirty-day uptime instead of the status word |
+| [![](https://demo.inbrief.sh/badge/no-such-service.svg)](https://demo.inbrief.sh) | *any unrecognised slug* | Never a broken image |
 
-</div>
+**Renders inside shields.io too.** `/badge.json` returns the shields
+[endpoint-badge schema](https://shields.io/badges/endpoint-badge), so shields
+draws your live status in any of its own styles:
+
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fdemo.inbrief.sh%2Fbadge.json&style=flat-square)](https://demo.inbrief.sh)
+&nbsp;
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fdemo.inbrief.sh%2Fbadge.json&style=for-the-badge)](https://demo.inbrief.sh)
+&nbsp;
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fdemo.inbrief.sh%2Fbadge.json&style=plastic)](https://demo.inbrief.sh)
+
+```md
+[![status](https://your-page.inbrief.sh/badge.svg)](https://your-page.inbrief.sh/)
+```
+
+**Feeds and calendars.** `/feed.xml` is the incident ledger as RSS 2.0 — filter
+it by service and by language (`?service=api&lang=ar`) — alongside Atom and a
+maintenance calendar, all generated with copy buttons in **Branding → Embed**.
+
+**In-page widgets.** A live status widget that drops into your own site, styled
+from the console, with no code changes at the embedding end. Built, and in
+development — not yet released for general Cloud use.
 
 <br>
 
