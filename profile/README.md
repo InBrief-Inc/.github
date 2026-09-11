@@ -111,9 +111,11 @@ and the site ships an [llms.txt](https://inbrief.sh/llms.txt) so coding agents c
 <div align="center">
 <br>
 
-**A live badge, served by InBrief right now:** &nbsp; <a href="https://demo.inbrief.sh"><img src="https://demo.inbrief.sh/badge.svg" alt="Demo page status"></a>
+**Not a picture — this badge is live, served by InBrief as you read it:**
 
-<sub>Drop <code>/badge.svg</code> from any InBrief page into a README or dashboard.</sub>
+<a href="https://demo.inbrief.sh"><img src="https://demo.inbrief.sh/badge.svg" alt="Live status of the InBrief demonstration page"></a>
+
+<sub>It reports our <a href="https://demo.inbrief.sh">demonstration page</a>, which is held in an incident on purpose — so it says <code>degraded</code> by design.<br>Drop <code>/badge.svg</code> from any InBrief page into a README or a dashboard.</sub>
 
 </div>
 
