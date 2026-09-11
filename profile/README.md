@@ -158,8 +158,6 @@ development — not yet released for general Cloud use.
 [**status.sakneen.com**](https://status.sakneen.com) is a customer page carrying
 real incidents — not a mock-up.
 
-Built with TypeScript, Next.js, NestJS and MongoDB.
-
 ## Repositories
 
 Most of our work is private; this page is the front door. The public
