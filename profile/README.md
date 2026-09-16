@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/InBrief-Inc/.github/main/profile/banner.png" alt="InBrief — incident communication, without lock-in" width="100%">
+<img src="https://raw.githubusercontent.com/InBrief-Inc/.github/main/profile/banner.png?v=2" alt="InBrief — incident communication, without lock-in" width="100%">
 
 <br><br>
 
@@ -86,7 +86,7 @@ boundaries are ready. [See the deployment models →](https://inbrief.sh/#ib-dep
 | :-- | :-- |
 | 📊 **Status pages** | Your brand, your logo, your accent, your history window. Run more than one page from a single account. |
 | 🌐 **Custom domains** | Point a DNS record at InBrief; the certificate is issued and renewed for you. |
-| 📡 **Monitoring** | Website, port, DNS and cron-job checks, grouped into the services your customers recognise. |
+| 📡 **Monitoring** | HTTP, TCP, DNS and ping checks, plus heartbeats for cron jobs and pipelines, grouped into the services your customers recognise. |
 | 🗄 **Database health** | Private connection and pool diagnostics — visible to you, never on the public page. |
 | 🚨 **Incidents** | Publish, update and resolve. Schedule maintenance ahead of time; write the postmortem afterwards. |
 | 📬 **Subscribers** | Email, Discord, Microsoft Teams, Telegram and browser push — one update reaches every channel. |
@@ -103,7 +103,7 @@ boundaries are ready. [See the deployment models →](https://inbrief.sh/#ib-dep
 | [**Event API**](https://inbrief.sh/docs/developers/event-api) | Batch application outcomes into the private operational view |
 | [**Webhooks**](https://inbrief.sh/docs/developers/webhooks) | Signed deliveries, documented event types and retry behaviour |
 | [**Badges & feeds**](https://inbrief.sh/docs/developers/badges-and-feeds) | SVG badges, JSON status, RSS and Atom — public, no key required |
-| [**MCP**](https://inbrief.sh/docs/developers/mcp) | Model Context Protocol connection, in preview |
+| [**MCP**](https://inbrief.sh/docs/developers/mcp) | Connect an assistant to your account by URL |
 
 The full REST contract is published as [OpenAPI](https://inbrief.sh/docs/developers/openapi.json),
 and the site ships an [llms.txt](https://inbrief.sh/llms.txt) so coding agents can read it directly.
@@ -111,52 +111,53 @@ and the site ships an [llms.txt](https://inbrief.sh/llms.txt) so coding agents c
 ## Badges, widgets & feeds
 
 Public, unauthenticated, cached for five minutes — no API key anywhere, because
-it is all public information by design. **A badge URL never 404s:** an unknown
-slug, a renamed service, even an unknown host renders the grey `unknown` badge,
-because a broken image in somebody else's README reads as *your* service being
-broken.
+it is all public information by design. Badges and the widget are drawn by
+InBrief in your colours and served from our side, so the README, the docs site
+and the app footer all say what the status page says.
 
-Every badge below is a real SVG served by InBrief from our demonstration page
-(GitHub re-fetches them every few minutes):
+**Named badges** come in three variants — signal, compact and uptime — in light,
+dark or your own palette, and in all four languages. These follow your GitHub
+theme:
 
-| | Route | What it shows |
-| :-- | :-- | :-- |
-| [![](https://demo.inbrief.sh/badge.svg)](https://demo.inbrief.sh) | `/badge.svg` | The whole page — `operational`, `degraded`, `down` or `unknown` |
-| [![](https://demo.inbrief.sh/badge/api.svg)](https://demo.inbrief.sh) | `/badge/api.svg` | One monitor, labelled with its own name |
-| [![](https://demo.inbrief.sh/badge/legacy-import.svg)](https://demo.inbrief.sh) | `/badge/legacy-import.svg` | The service currently in the incident |
-| [![](https://demo.inbrief.sh/badge.svg?style=uptime)](https://demo.inbrief.sh) | `/badge.svg?style=uptime` | Thirty-day uptime instead of the status word |
-| [![](https://demo.inbrief.sh/badge/no-such-service.svg)](https://demo.inbrief.sh) | *any unrecognised slug* | Never a broken image |
+<div align="center">
 
-**Renders inside shields.io too.** `/badge.json` returns the shields
-[endpoint-badge schema](https://shields.io/badges/endpoint-badge), so shields
-draws your live status in any of its own styles:
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/InBrief-Inc/.github/main/profile/badges/signal-operational-dark.svg"><img src="https://raw.githubusercontent.com/InBrief-Inc/.github/main/profile/badges/signal-operational-light.svg" width="301" height="72" alt="Signal badge: Northwind, everything is working, 99.98% uptime, live status"></picture>
 
-[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fdemo.inbrief.sh%2Fbadge.json&style=flat-square)](https://demo.inbrief.sh)
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/InBrief-Inc/.github/main/profile/badges/compact-operational-dark.svg"><img src="https://raw.githubusercontent.com/InBrief-Inc/.github/main/profile/badges/compact-operational-light.svg" width="191" height="40" alt="Compact badge: everything is working"></picture>
 &nbsp;
-[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fdemo.inbrief.sh%2Fbadge.json&style=for-the-badge)](https://demo.inbrief.sh)
-&nbsp;
-[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fdemo.inbrief.sh%2Fbadge.json&style=plastic)](https://demo.inbrief.sh)
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/InBrief-Inc/.github/main/profile/badges/uptime-operational-dark.svg"><img src="https://raw.githubusercontent.com/InBrief-Inc/.github/main/profile/badges/uptime-operational-light.svg" width="371" height="40" alt="Uptime badge: everything is working, 99.98% uptime, live status"></picture>
 
-```md
-[![status](https://your-page.inbrief.sh/badge.svg)](https://your-page.inbrief.sh/)
-```
+<br>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/InBrief-Inc/.github/main/profile/badges/compact-degraded-dark.svg"><img src="https://raw.githubusercontent.com/InBrief-Inc/.github/main/profile/badges/compact-degraded-light.svg" width="260" height="40" alt="Compact badge: some services are running slowly"></picture>
+&nbsp;
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/InBrief-Inc/.github/main/profile/badges/compact-outage-dark.svg"><img src="https://raw.githubusercontent.com/InBrief-Inc/.github/main/profile/badges/compact-outage-light.svg" width="242" height="40" alt="Compact badge: some services are unavailable"></picture>
+&nbsp;
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/InBrief-Inc/.github/main/profile/badges/compact-maintenance-dark.svg"><img src="https://raw.githubusercontent.com/InBrief-Inc/.github/main/profile/badges/compact-maintenance-light.svg" width="274" height="40" alt="Compact badge: scheduled maintenance in progress"></picture>
+
+<br>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/InBrief-Inc/.github/main/profile/badges/signal-operational-ar-dark.svg"><img src="https://raw.githubusercontent.com/InBrief-Inc/.github/main/profile/badges/signal-operational-ar-light.svg" width="413" height="72" alt="The signal badge in Arabic, laid out right to left"></picture>
+
+<sub>Every state has its own colour and glyph, and the wording is the status page's own.</sub>
+
+</div>
+
+**The website widget.** A card that floats in a corner of your own site and
+expands into the latest update, or a bar across the bottom of every page. Nine
+placements, styled from the console, with nothing to redeploy at your end. Show
+it only when something is wrong, or always; a visitor can dismiss it for that
+page view.
 
 **Feeds and calendars.** `/feed.xml` is the incident ledger as RSS 2.0 — filter
 it by service and by language (`?service=api&lang=ar`) — alongside Atom and a
 maintenance calendar, all generated with copy buttons in **Branding → Embed**.
 
-**In-page widgets.** A live status widget that drops into your own site, styled
-from the console, with no code changes at the embedding end. Built, and in
-development — not yet released for general Cloud use.
+[Badges and widgets in the docs →](https://inbrief.sh/docs/product/badges-and-widgets)
 
 <br>
 
 ---
-
-## In production
-
-[**status.sakneen.com**](https://status.sakneen.com) is a customer page carrying
-real incidents — not a mock-up.
 
 ## Repositories
 

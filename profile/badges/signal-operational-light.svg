@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="301" height="72" viewBox="0 0 301 72" role="img" aria-label="Northwind: Everything is working. 99.98% uptime · live status" direction="ltr" font-family="Noto Sans,Inter,system-ui,-apple-system,BlinkMacSystemFont,sans-serif" data-state="operational" data-variant="signal" data-theme="light" data-palette="inbrief" data-pulse="on">
+<title>Northwind: Everything is working. 99.98% uptime · live status</title>
+<style>
+.ib-surface{fill:#FFFFFF}
+.ib-foreground{fill:#18221F}
+.ib-muted{fill:#65716D}
+.ib-muted-stroke{stroke:#DBE4E0}
+.ib-accent{fill:#176d4a}
+.ib-accent-stroke{stroke:#176d4a}
+.ib-outline{stroke:#176d4a;stroke-opacity:.62}
+.ib-pulse-ring{animation:ib-pulse 2.4s ease-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes ib-pulse{0%{opacity:.32;transform:scale(.72)}70%,100%{opacity:0;transform:scale(1.28)}}
+@media (prefers-reduced-motion: reduce){.ib-pulse-ring{animation:none;opacity:.16;transform:none}}
+</style>
+<rect class="ib-surface ib-outline" x="0.75" y="0.75" width="299.5" height="38.5" rx="12" stroke-width="1.5"/>
+<g aria-hidden="true">
+<rect class="ib-accent" x="12" y="9" width="22" height="22" rx="8" opacity=".16"/>
+<text class="ib-accent" x="23" y="25" font-size="16" font-weight="600" text-anchor="middle">i</text>
+</g>
+<text class="ib-foreground" x="73" y="25" font-size="13" font-weight="600" text-anchor="middle" direction="ltr" unicode-bidi="plaintext">Northwind</text>
+<line class="ib-muted-stroke" x1="112.5" y1="10" x2="112.5" y2="30" stroke-width="1" opacity=".32" aria-hidden="true"/>
+<g aria-hidden="true">
+<circle class="ib-accent ib-pulse-ring" cx="132" cy="20" r="9" opacity=".28"/>
+<circle class="ib-accent" cx="132" cy="20" r="9" opacity=".12"/>
+<circle class="ib-accent-stroke" cx="132" cy="20" r="8.5" fill="none" stroke-width="1" opacity=".28"/>
+<circle class="ib-accent" cx="132" cy="20" r="4"/>
+</g>
+<text class="ib-accent" x="220" y="25" font-size="14" font-weight="500" text-anchor="middle" direction="ltr" unicode-bidi="plaintext">Everything is working</text>
+<text class="ib-muted" x="150.5" y="64" font-size="13" font-weight="500" text-anchor="middle" direction="ltr" unicode-bidi="plaintext">99.98% uptime · live status</text>
+</svg>

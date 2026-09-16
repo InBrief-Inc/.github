@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="191" height="40" viewBox="0 0 191 40" role="img" aria-label="Everything is working" direction="ltr" font-family="Noto Sans,Inter,system-ui,-apple-system,BlinkMacSystemFont,sans-serif" data-state="operational" data-variant="compact" data-theme="dark" data-palette="inbrief" data-pulse="on">
+<title>Everything is working</title>
+<style>
+.ib-surface{fill:#1B2421}
+.ib-foreground{fill:#F0F7F4}
+.ib-muted{fill:#9EAAA6}
+.ib-muted-stroke{stroke:#31403B}
+.ib-accent{fill:#67ca98}
+.ib-accent-stroke{stroke:#67ca98}
+.ib-outline{stroke:#67ca98;stroke-opacity:.62}
+.ib-pulse-ring{animation:ib-pulse 2.4s ease-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes ib-pulse{0%{opacity:.32;transform:scale(.72)}70%,100%{opacity:0;transform:scale(1.28)}}
+@media (prefers-reduced-motion: reduce){.ib-pulse-ring{animation:none;opacity:.16;transform:none}}
+</style>
+<rect class="ib-surface ib-outline" x="0.75" y="0.75" width="189.5" height="38.5" rx="12" stroke-width="1.5"/>
+<g aria-hidden="true">
+<circle class="ib-accent ib-pulse-ring" cx="22" cy="20" r="9" opacity=".28"/>
+<circle class="ib-accent" cx="22" cy="20" r="9" opacity=".12"/>
+<circle class="ib-accent-stroke" cx="22" cy="20" r="8.5" fill="none" stroke-width="1" opacity=".28"/>
+<circle class="ib-accent" cx="22" cy="20" r="4"/>
+</g>
+<text class="ib-accent" x="110" y="25" font-size="14" font-weight="500" text-anchor="middle" direction="ltr" unicode-bidi="plaintext">Everything is working</text>
+</svg>
