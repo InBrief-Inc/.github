@@ -4,10 +4,7 @@
 
 <br><br>
 
-[![Website](https://img.shields.io/badge/Website-inbrief.sh-1b87c5?style=for-the-badge&logoColor=white)](https://inbrief.sh)
-[![Docs](https://img.shields.io/badge/Docs-Read_the_guides-22b573?style=for-the-badge&logoColor=white)](https://inbrief.sh/docs)
-[![REST API](https://img.shields.io/badge/REST_API-OpenAPI-1b7a4f?style=for-the-badge&logo=openapiinitiative&logoColor=white)](https://inbrief.sh/docs/developers/openapi.json)
-[![Live demo](https://img.shields.io/badge/Live_demo-demo.inbrief.sh-0d1117?style=for-the-badge&logoColor=white)](https://demo.inbrief.sh)
+**[inbrief.sh](https://inbrief.sh)** &nbsp;·&nbsp; **[Docs](https://inbrief.sh/docs)** &nbsp;·&nbsp; **[OpenAPI](https://inbrief.sh/docs/developers/openapi.json)** &nbsp;·&nbsp; **[Live demo](https://demo.inbrief.sh)** &nbsp;·&nbsp; **[Build your plan](https://inbrief.sh/build)**
 
 **Hosted status pages that keep your customers informed — while you keep the account, the domain and the history.**
 
@@ -28,7 +25,7 @@ An API to drive all three from your own systems.
 
 ## Why teams move to InBrief
 
-### 💸 &nbsp;Pay for what you switch on — no tiers
+### Pay for what you switch on. No tiers.
 
 Tiered pricing makes you buy a bundle to reach one thing inside it. The custom
 domain sits in the tier above yours, so you move up a plan and pay for four
@@ -42,7 +39,7 @@ discount, never a different product.
 
 **Free · $0** &nbsp;·&nbsp; **Start · $10/mo** &nbsp;·&nbsp; **Pro · $20/mo** &nbsp;·&nbsp; [**or build your own →**](https://inbrief.sh/build)
 
-### 🌍 &nbsp;Write the incident once, publish it in every language
+### Write the incident once. Publish it in every language.
 
 Choose the languages your page publishes in and InBrief prepares the
 translations automatically — you review them before anything goes out. Visitors
@@ -57,7 +54,7 @@ page that lays out left-to-right reads as broken to the people it is for.
 <br><sub>The same page, same incident, <code>?lang=ar</code> — layout mirrored, digits localised</sub>
 </div>
 
-### 🛟 &nbsp;A status page that survives the outage it is reporting
+### A status page that survives the outage it reports.
 
 A status page served from the infrastructure it reports on is the one page
 guaranteed to be down exactly when it matters. Outage continuity puts the
@@ -65,7 +62,7 @@ customer-facing page somewhere else entirely — so when your own systems are
 unreachable, visitors still get a page, carrying the message you want them to
 read instead of a connection error.
 
-### 🏛 &nbsp;Run it where your compliance team needs it
+### Run it where your compliance team needs it.
 
 | | Deployment | Status |
 | :-- | :-- | :-- |
@@ -84,15 +81,15 @@ boundaries are ready. [See the deployment models →](https://inbrief.sh/#ib-dep
 
 | | |
 | :-- | :-- |
-| 📊 **Status pages** | Your brand, your logo, your accent, your history window. Run more than one page from a single account. |
-| 🌐 **Custom domains** | Point a DNS record at InBrief; the certificate is issued and renewed for you. |
-| 📡 **Monitoring** | HTTP, TCP, DNS and ping checks, plus heartbeats for cron jobs and pipelines, grouped into the services your customers recognise. |
-| 🗄 **Database health** | Private connection and pool diagnostics — visible to you, never on the public page. |
-| 🚨 **Incidents** | Publish, update and resolve. Schedule maintenance ahead of time; write the postmortem afterwards. |
-| 📬 **Subscribers** | Email, Discord, Microsoft Teams, Telegram and browser push — one update reaches every channel. |
-| 💬 **Team alerts** | Monitor and certificate alerts into the Slack channel your responders actually watch. |
-| 📈 **Analytics** | Page loads, visitor-days and subscription conversion, per public page. |
-| 👥 **Roles & audit** | Owner, admin, member and viewer permissions, with an exportable log of who changed what. |
+| **Status pages** | Your brand, your logo, your accent, your history window. Run more than one page from a single account. |
+| **Custom domains** | Point a DNS record at InBrief; the certificate is issued and renewed for you. |
+| **Monitoring** | HTTP, TCP, DNS and ping checks, plus heartbeats for cron jobs and pipelines, grouped into the services your customers recognise. |
+| **Database Health** | Private connection and pool diagnostics — visible to you, never on the public page. |
+| **Incidents** | Publish, update and resolve. Schedule maintenance ahead of time; write the postmortem afterwards. |
+| **Subscribers** | Email, Discord, Microsoft Teams, Telegram and browser push — one update reaches every channel. |
+| **Team alerts** | Monitor and certificate alerts into the Slack channel your responders actually watch. |
+| **Analytics** | Page loads, visitor-days and subscription conversion, per public page. |
+| **Roles & audit** | Owner, admin, member and viewer permissions, with an exportable log of who changed what. |
 
 ## Built to be driven by code
 
@@ -161,8 +158,7 @@ maintenance calendar, all generated with copy buttons in **Branding → Embed**.
 
 ## Repositories
 
-Most of our work is private; this page is the front door. The public
-repositories here are the ones useful on their own.
+Most of our work is private; this page is the front door.
 
 <br>
 
